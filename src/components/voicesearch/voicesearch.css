@@ -1,0 +1,37 @@
+.voiceModal{
+    position: absolute;
+    z-index: 11111;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+.voiceModal .voice-search{
+    height: 300px;
+}
+.voiceModal .micIcon{
+    position: relative;
+    height: 80px;
+    width: 60px;
+    font-size: 2.5rem;
+    border-radius: 50%;
+    z-index: 1;
+}
+.voiceModal .micIcon::before{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    animation: animateIcon 1s forwards infinite;
+    z-index: 0;
+    border-radius: 50%;
+}
+@keyframes animateIcon{
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1.1);
+    }
+}
